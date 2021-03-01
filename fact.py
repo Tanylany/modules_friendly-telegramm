@@ -18,8 +18,6 @@ async def _(event):
 
         return
 
-    await asyncio.sleep(2)
-
     x=(random.randrange(1,97))
 
     if x==1:
