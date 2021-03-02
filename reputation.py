@@ -41,4 +41,8 @@ class MyRepMod(loader.Module):
                 if message.text == "+": 
                     if repstatus is not False: 
                         number += 1 
-                        self.db.set("MyRep", "my_repa", number)
+                        self.db.set("MyRep", "my_repa", number) 
+                        await message.reply(f"<b>Ты повысл мою репутацию!\nТеперь моя  репутация: {number}.</b>") 
+                    else: 
+                        await message.edit(f"[MyRepMod] Отключен.") 
+        except: pass
